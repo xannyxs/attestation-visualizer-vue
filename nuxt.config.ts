@@ -5,15 +5,14 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/eslint-module",
-    "@nuxt/image"
+    "@nuxt/image",
+    "@use-wagmi/nuxt",
   ],
-  css: [
-    '@/assets/css/globals.css',
-  ],
+  css: ["@/assets/css/globals.css"],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-})
+});

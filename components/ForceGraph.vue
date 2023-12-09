@@ -1,5 +1,5 @@
 <script lang="ts">
-import ForceGraph3D from 'force-graph';
+import ForceGraph3D from '3d-force-graph';
 
 export default {
   mounted() {
