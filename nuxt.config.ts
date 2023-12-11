@@ -7,6 +7,12 @@ export default defineNuxtConfig({
     "@nuxtjs/eslint-module",
     "@nuxt/image",
     "@use-wagmi/nuxt",
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: { "League+Spartan": true },
+      },
+    ],
   ],
   css: ["@/assets/css/globals.css"],
   postcss: {
@@ -14,5 +20,12 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  typescript: {
+    strict: true,
+    typeCheck: true,
+    eslint: {
+      files: './**/*.{ts,js,vue}'
+    }
   },
 });
