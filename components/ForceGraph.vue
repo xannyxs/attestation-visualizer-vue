@@ -1,10 +1,10 @@
 <script lang="ts">
-import ForceGraph3D from "3d-force-graph";
+import ForceGraph3D from '3d-force-graph'
 
 export default {
   mounted() {
-    const g = ForceGraph3D()(this.$refs.graph as HTMLElement);
-    const N = 300;
+    const g = ForceGraph3D()(this.$refs.graph as HTMLElement)
+    const N = 300
     const gData = {
       nodes: [...Array(N).keys()].map((i) => ({ id: i })),
       links: [...Array(N).keys()]
@@ -13,11 +13,11 @@ export default {
           source: id,
           target: Math.round(Math.random() * (id - 1)),
         })),
-    };
+    }
 
-    g.graphData(gData);
+    g.graphData(gData)
   },
-};
+}
 </script>
 
 <template>

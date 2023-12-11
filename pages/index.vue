@@ -1,5 +1,5 @@
 <script setup>
-import { ActiveView } from '~/utils/types.d';
+import { ActiveView } from '~/utils/types.d'
 // import { curActiveView } from '~/composables/SidebarRef';
 </script>
 
@@ -9,7 +9,9 @@ import { ActiveView } from '~/utils/types.d';
       <SidebarLayout />
     </div>
 
-    <div :class="`w-[35rem] relative ${activeView === ActiveView.None ? 'z-0' : 'z-10'
+    <div
+      :class="`w-[35rem] relative ${
+        activeView === ActiveView.None ? 'z-0' : 'z-10'
       }`">
       <template v-if="curActiveView === ActiveView.Grid">
         <GridView />
@@ -21,7 +23,6 @@ import { ActiveView } from '~/utils/types.d';
         <CreditsView />
       </template> -->
     </div>
-
 
     <div class="absolute">
       <ForceGraph />

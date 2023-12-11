@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 body {
-  font-family: "League Spartan", sans-serif;
+  font-family: 'League Spartan', sans-serif;
   color: black;
   margin: 0;
   padding: 0;
   height: 100vh;
   background-color: black;
-} 
+}

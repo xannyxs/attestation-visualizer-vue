@@ -3,18 +3,18 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
   modules: [
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/eslint-module",
-    "@nuxt/image",
-    "@use-wagmi/nuxt",
+    '@nuxtjs/tailwindcss',
+    ['@nuxtjs/eslint-module', { exclude: '@nuxtjs' }],
+    '@nuxt/image',
+    '@use-wagmi/nuxt',
     [
-      "@nuxtjs/google-fonts",
+      '@nuxtjs/google-fonts',
       {
-        families: { "League+Spartan": true },
+        families: { 'League+Spartan': true },
       },
     ],
   ],
-  css: ["@/assets/css/globals.css"],
+  css: ['@/assets/css/globals.css'],
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -24,8 +24,5 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
     typeCheck: true,
-    eslint: {
-      files: './**/*.{ts,js,vue}'
-    }
   },
-});
+})
