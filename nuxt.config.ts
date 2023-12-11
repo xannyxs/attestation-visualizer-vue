@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
-    ['@nuxtjs/eslint-module', { exclude: '@nuxtjs' }],
+    '@nuxtjs/eslint-module',
     '@nuxt/image',
     '@use-wagmi/nuxt',
     [
@@ -24,5 +24,6 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
     typeCheck: true,
+    shim: false
   },
 })

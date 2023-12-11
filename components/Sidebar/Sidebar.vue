@@ -2,16 +2,16 @@
   <aside class="h-screen">
     <nav class="h-full flex flex-col bg-white border-r">
       <div class="p-4 pb-2 flex justify-between items-center">
-        <img
+        <NuxtImg
           :src="logoSrc"
-          :class="`overflow-hidden transition-all ${expanded ? 'w-32' : 'w-0'}`"
+          :class="`overflow-hidden transition-all ${g_useExpanded ? 'w-32' : 'w-0'}`"
           alt="logo"
           :width="dimension"
           :height="dimension" />
         <button
-          @click="toggleExpanded"
-          class="p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100">
-          <ChevronFirst v-if="expanded" />
+          class="p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100"
+          @click="toggleExpanded">
+          <ChevronFirst v-if="g_useExpanded" />
           <ChevronLast v-else />
         </button>
       </div>
@@ -25,12 +25,11 @@
 
 <script setup lang="ts">
 import { ChevronFirst, ChevronLast } from 'lucide-vue-next'
-import { expanded } from '~/composables/SidebarRef'
 
 const logoSrc = 'https://img.logoipsum.com/243.svg'
 const dimension = 150
 
 const toggleExpanded = () => {
-  expanded.value = !expanded.value
+  g_useExpanded.value = !g_useExpanded.value
 }
 </script>

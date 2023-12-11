@@ -1,5 +1,4 @@
-import { ref } from 'vue'
 import { ActiveView } from '~/utils/types.d'
 
-export const expanded = ref(false)
-export const curActiveView = ref(ActiveView.None)
+export const g_useExpanded = useState<boolean>('expanded', () => false)
+export const g_useActiveView = useState<ActiveView>('activeView', () => ActiveView.None)

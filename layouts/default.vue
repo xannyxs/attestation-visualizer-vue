@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { createPublicClient, http } from 'viem'
-import { mainnet } from 'use-wagmi'
+import { mainnet, createConfig } from 'use-wagmi'
 
 const configWagmi = createConfig({
   autoConnect: true,
@@ -12,5 +12,5 @@ const configWagmi = createConfig({
 </script>
 
 <template>
-  <slot></slot>
+    <slot></slot>
 </template>

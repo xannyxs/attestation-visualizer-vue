@@ -1,25 +1,26 @@
 <script setup>
+import { g_useActiveView } from '~/composables/SidebarRef';
+import GridView from '~/components/View/Grid/GridView.vue';
 import { ActiveView } from '~/utils/types.d'
-// import { curActiveView } from '~/composables/SidebarRef';
 </script>
 
 <template>
   <main class="flex">
     <div class="z-10">
-      <SidebarLayout />
+        <SidebarLayout />
     </div>
 
     <div
       :class="`w-[35rem] relative ${
         activeView === ActiveView.None ? 'z-0' : 'z-10'
       }`">
-      <template v-if="curActiveView === ActiveView.Grid">
+      <template v-if="g_useActiveView === ActiveView.Grid">
         <GridView />
       </template>
-      <!-- <template v-if="curActiveView === ActiveView.List">
+    <!-- <template v-if="g_useActiveView === ActiveView.List">
         <ListView />
       </template>
-      <template v-if="curActiveView === ActiveView.Credits">
+      <template v-if="g_useActiveView === ActiveView.Credits">
         <CreditsView />
       </template> -->
     </div>
